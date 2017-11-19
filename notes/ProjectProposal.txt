@@ -1,0 +1,14 @@
+Python Final Proposal
+I plan to make a sudoku solver with some simple algorithms. The game will probably have a
+simple GUI that would allow the user to try to solve the puzzle. My solver will either check if the
+solution is correct or it will actually solve the puzzle when the user requests the solution. I plan
+to work alone in this project. I think this fulfils the project criteria since this is not a trivial task. I
+know a similar homework is given in 521 but I have not taken that class nor I plan to so I think
+this is fair game.
+Requirements:
+Probably will use a generator to generate pseudo random squares int sudoku
+Custom class: I need few custom classes for good game design anyways so I am not worried
+about this
+Library usage: Random I have to use for pseudo random. Numpy.ndarray I will use for back-end
+representation of sudoku matrix. And definetly multiple methods from itertools.
+So therefore my game would satisfy conditions.
