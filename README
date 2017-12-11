@@ -1,0 +1,62 @@
+Coding Requirements for my projects:
+
+A - Generator: I have  made a generator for giving me a sequence of random
+number within constraints defined in the generator
+
+B - Custom Class: In my sudokuMaker there is a sudoku class that represents the
+state of the sudoku board that is made
+
+C- Magic methods - eq
+This checks if the users input is equal to to sudoku that is given to the user 
+so that user would not be able to give a random correct sudoku -> That sudoku is
+techinically correct but that is not the sudoku that we have provided to the user therefore it 
+would be false! So we basically do number by number comparison for the boxes that we determined 
+upon creation
+
+Then for the complete requirement it checks whether the answer is correct or not
+
+Library usage:
+
+Numpy -> internal state of the sudoku
+Copy -> Sometimes sudoku solver makes a bad guess :( has to be able to backtrack so reset state 
+keep a copy with deepcopy --> Otherwise changes would be made to original
+Random --> Used to create th sudoku board
+
+
+
+Game Structure:
+
+Just Command Line prompt game: I did not do a GUI because I think I made a very efficient Sudoku Solver and this did take me a lot of time. There are 3 modes:
+
+python 3 main.py
+
+Then user prompt asks mode
+
+3--> Quit games
+2--> Ask to solve a sudoku --> User types its sudoku that it wants to be solved in a certain format
+specified from the command promt -> after completing -> Sudoku solver spits out the answer in less than 0.01 secs
+1--> Users asks to play sudoku: Program spits out a sudoku for user to solve -> User types its final response: If correct program says correct else it says wrong
+
+And it goes on
+
+
+
+Notes:
+I know backtracking is commonly used to solved sudokus but I used Probability Set Reduction. We have a 3D matrix to represent the probability set for each box: At each step it does horizontal/vertical/box reduction to its probability set till there is a deterministic answer to that.
+
+So my sudoku solver guesses much less frequently than most online solvers. Even when it guesses it picks the box wit least amount of entropy so minimized amount of wrong guesses in comparison to in order guessing.
+
+It seems like its memory inefficient but it is actually memory efficient beacuse my recursion stack is much shorter.
+
+For a very hard classified sudoku my solver only guessed once and finished in less than 0.1 secs.
+
+I think this is an elegant solution and on top of the game feature I think this definetly justifies
+the 10 hrs work limit.
+
+http://www.telegraph.co.uk/news/science/science-news/9359579/Worlds-hardest-sudoku-can-you-crack-it.html --> Can solve in one seconds see hardest.txt
+
+
+
+
+
+
